@@ -4,12 +4,13 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                gradlew('clean', 'classes')
+                sh './gradlew clean'
+               
             }
         }
         stage('Assemble') {
             steps {
-                gradlew('assemble')
+                 sh './gradlew assemble'
             }
         }
     }
